@@ -56,6 +56,7 @@ public class BallController : MonoBehaviour {
 		_velocity -= _velocity * _bounceVelocityLoss;
 		if (_velocity.magnitude > _minVelocityToCompress)
 			_effector.Bounce(normal);
+		_effector.PlayEffects(normal);
 	}
 
 	private void Push(Vector3 touchWorldPosition) {

@@ -14,6 +14,9 @@ public class BallBounceEffector : MonoBehaviour {
 	public void Bounce(Vector3 normal) {
 		transform.forward = -normal;
 		_animator.enabled = true;
+	}
+
+	public void PlayEffects(Vector3 normal) {
 		BounceParticles particlesObject = Instantiate(_bounceParticles,
 			transform.position - normal / 3f,
 			Quaternion.identity);

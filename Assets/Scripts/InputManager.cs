@@ -45,7 +45,7 @@ public class InputManager : MonoBehaviour {
 		Ray ray = _mainCamera.ScreenPointToRay(screenPosition);
 		LayerMask groundLayer = 1 << GroundLayerNumber;
 		RaycastHit hit;
-		if (Physics.Raycast(ray, out hit, 30f, groundLayer)) 
+		if (Physics.Raycast(ray, out hit, 50f, groundLayer)) 
 			return hit.point - Vector3.up * hit.point.y;
 		return Vector3.zero;
 	}
